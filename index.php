@@ -1,3 +1,6 @@
+<?php
+    require "code_login.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,13 +14,13 @@
         <div class="ctn-form">
             <img src="imagenes/kpop.png" alt="logo" class="logo">
             <h1 class="title">Iniciar Sesión</h1>
-            <form action="">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-                <span class="msg-error"></span>
+                <input type="text" id="email" name="email">
+                <span class="msg-error"><?php echo $email_error; ?></span>
                 <label for="contrasena">Contraseña</label>
-                <input type="password" name="contrasena" id="contrasena">
-                <span class="msg-error"></span>
+                <input type="password" id="contrasena" name="password">
+                <span class="msg-error"><?php echo $password_error; ?></span>
                 <input type="submit" value="Iniciar">
             </form>
             <span class="text-footer">¿Aun no te has registrado?
@@ -26,7 +29,7 @@
         </div>
         <div class="ctn-text">
             <div class="capa"></div>
-            <h1 class="title-description">Lorem ipsum dolor sit amet.</h1>
+            <h1 class="title-description">BangBang - Lo mejor del kpop a solo un click</h1>
             <p class="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eveniet cumque harum corporis laboriosam doloribus, explicabo dolore commodi nam! Aliquam, earum exercitationem? Explicabo enim quaerat nisi molestiae ipsam quas iusto!</p>
         </div>
     </div>
