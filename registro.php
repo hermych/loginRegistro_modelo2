@@ -19,7 +19,7 @@
                 <input type="text" name="username" id="usuario">
                 <span class="msg-error"><?php echo $username_error; ?></span>
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email">
+                <input type="email" name="email" id="email">
                 <span class="msg-error"><?php echo $email_error; ?></span>
                 <label for="contrasena">Contraseña</label>
                 <input type="password" name="password" id="contrasena">

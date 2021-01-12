@@ -16,7 +16,7 @@
             <h1 class="title">Iniciar Sesión</h1>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email">
                 <span class="msg-error"><?php echo $email_error; ?></span>
                 <label for="contrasena">Contraseña</label>
                 <input type="password" id="contrasena" name="password">
@@ -24,7 +24,8 @@
                 <input type="submit" value="Iniciar">
             </form>
             <span class="text-footer">¿Aun no te has registrado?
-                <a href="registro.php">Registrate</a>
+                <a href="registro.php">Registrate</a><br>
+                <a href="inicio_recuperar.php">Restablecer contraseña</a>
             </span>
         </div>
         <div class="ctn-text">
